@@ -903,6 +903,8 @@ section2 {
     color: #8a8a8a;
 }
 
+
+
 .backgroundSliderLeft {
     position: absolute;
     left: 0;
@@ -923,6 +925,7 @@ section2 {
 
 .backgroundSliderDiv {
     position: relative;
+    overflow: hidden;
 }
 
 /* ------------media query for menu-------- */
