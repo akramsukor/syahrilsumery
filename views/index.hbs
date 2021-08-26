@@ -627,7 +627,7 @@
                 start: "top bottom",
             }
         });
-        tl7.to(".backgroundSliderLeft", { x: -1000, duration: 2, ease: Power2.easeInOut });
+        tl7.to(".backgroundSliderLeft", { x: "-100%", duration: 1.2, ease: Power2.easeInOut });
 
         let tl8 = gsap.timeline({
             scrollTrigger: {
@@ -635,7 +635,7 @@
                 start: "top bottom",
             }
         });
-        tl8.to(".backgroundSliderRight", { x: 1000, duration: 2, ease: Power2.easeInOut });
+        tl8.to(".backgroundSliderRight", { x: "100%", duration: 1.2, ease: Power2.easeInOut });
 
         gsap.from(".mainTitle1", {
             scrollTrigger: {
