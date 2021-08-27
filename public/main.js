@@ -48,7 +48,7 @@ setInterval(function() {
     if(counter4>4){
         counter4 = 1;
     }
-},5000);
+},8000);
 
 // lightslider-------------------------------------
 
