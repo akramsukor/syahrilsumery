@@ -12,13 +12,117 @@ function menutoggle () {
 
 //hero animation-----------------------------------------------------------------------------
 
-gsap.fromTo('.backgroundSlider', {x: "-100%"}, {delay: 1.2, x: "0%", duration: 1.2, ease: Power2.easeInOut})
-gsap.fromTo('.navbar', {x: "-100%"}, {delay: 1.2, x: "0%", duration: 1.2, ease: Power2.easeInOut})
-gsap.fromTo('.backgroundSlider2', {x: "-100%"}, {delay: 1.8, x: "0%", duration: 1.2, ease: Power2.easeInOut})
-gsap.fromTo('.backgroundSlider3', {x: "-100%"}, {delay: 1.8, x: "0%", duration: 1.2, ease: Power2.easeInOut})
-gsap.fromTo('.banner1', {y: "100%"}, {delay: 1.5, y: "0%", duration: 1.2, ease: Power2.easeInOut})
-gsap.from('.slider3', {height: 0, duration: 1.2, ease: Power2.easeInOut})
-gsap.fromTo('.rowTop', {y: "200", opacity:0}, {opacity: 1, delay: 2, y: "0%", duration: 1, ease: Power2.easeInOut})
+// gsap.fromTo('.backgroundSlider', {x: "-100%"}, {delay: 1.2, x: "0%", duration: 1.2, ease: Power2.easeInOut})
+gsap.fromTo('.navbar', {x: "-100%"}, {delay: 1.2, x: "0%", duration: 1.2, ease: Power2.easeInOut});
+gsap.from('.slider3', {height: 0, duration: 1.2, ease: Power2.easeInOut});
+// gsap.fromTo('.backgroundSlider2', {x: "-100%"}, {delay: 1.8, x: "0%", duration: 1.2, ease: Power2.easeInOut})
+// gsap.fromTo('.backgroundSlider3', {x: "-100%"}, {delay: 1.8, x: "0%", duration: 1.2, ease: Power2.easeInOut})
+gsap.fromTo('.banner1', {y: "100%"}, {delay: 1.5, y: "0%", duration: 1.2, ease: Power2.easeInOut});
+gsap.fromTo('.rowTop', {y: "200", opacity:0}, {opacity: 1, delay: 2, y: "0%", duration: 1, ease: Power2.easeInOut});
+
+let tl = gsap.timeline({
+    scrollTrigger: {
+        trigger: '.slider',
+        start: "bottom bottom",
+    }
+});
+tl.from(".slider", { scale: 0, opacity: 0, duration: 1});
+
+let tl2 = gsap.timeline({
+    scrollTrigger: {
+        trigger: '.slider2',
+        start: "bottom bottom",
+    }
+});
+tl2.from(".slider2", { scale: 0, opacity: 0, duration: 1});
+
+let tl3 = gsap.timeline({
+    scrollTrigger: {
+        trigger: '.mainTitle',
+        start: "bottom bottom",
+    }
+});
+tl3.from(".mainTitle", { x: -500, scale: 0, opacity: 0, duration: 1 });
+
+let tl4 = gsap.timeline({
+    scrollTrigger: {
+        trigger: '.ourProjects',
+        start: "top bottom",
+    }
+});
+tl4.from(".ourProjects", { y: 200, duration: 1 });
+
+let tl5 = gsap.timeline({
+    scrollTrigger: {
+        trigger: '.testimonial',
+        start: "top bottom"
+    }
+});
+tl5.from(".testimonial", { y: 200, duration: 1 });
+
+let tl6 = gsap.timeline({
+    scrollTrigger: {
+        trigger: '.maps',
+        start: "top bottom",
+    }
+});
+tl6.from(".maps", {y: 200, duration: 1 });
+
+let tl7 = gsap.timeline({
+    scrollTrigger: {
+        trigger: '.backgroundSliderLeft',
+        start: "top bottom",
+    }
+});
+tl7.to(".backgroundSliderLeft", { x: "-100%", duration: 1.2, ease: Power2.easeInOut });
+
+let tl8 = gsap.timeline({
+    scrollTrigger: {
+        trigger: '.backgroundSliderRight',
+        start: "top bottom",
+    }
+});
+tl8.to(".backgroundSliderRight", { x: "100%", duration: 1.2, ease: Power2.easeInOut });
+
+let tl9 = gsap.timeline({
+    scrollTrigger: {
+        trigger: '.row',
+        start: "top bottom",
+    }
+});
+tl9.from(".row", { y: "200", duration: .5, ease: Power2.easeOut });
+
+let tl0 = gsap.timeline({
+    scrollTrigger: {
+        trigger: '.ourServices',
+        start: "top bottom",
+    }
+});
+tl0.from(".ourServices", { y: "200px", opacity: 0, duration: 1, ease: Power2.easeOut });
+
+let tl11 = gsap.timeline({
+    scrollTrigger: {
+        trigger: '.ourVision',
+        start: "top bottom",
+    }
+});
+tl11.from(".ourVision", { y: "200px", opacity: 0, duration: 1, ease: Power2.easeOut });
+
+let tl12 = gsap.timeline({
+    scrollTrigger: {
+        trigger: '.contactUs',
+        start: "top bottom",
+    }
+});
+tl12.from(".contactUs", { y: "200px", opacity: 0, duration: 1, ease: Power2.easeOut });
+
+// gsap.from(".mainTitle1", {
+//     scrollTrigger: {
+//         trigger: '.mainTitle1',
+//         start: "top center",
+//     },
+//     x: -1000
+// });
 
 //auto slider------------------------------------------------------------------
 
@@ -126,10 +230,62 @@ setInterval(function() {
     });  
   });
 
+  $(document).ready(function() {
+    $('#responsive4').lightSlider({
+        item:1,
+        loop:false,
+        slideMove:1,
+        easing: 'cubic-bezier(0.25, 0, 0.25, 1)',
+        speed:600
+    });  
+  });
 
+  var form = document.getElementById("my-form");
+    
+  async function handleSubmit(event) {
+    event.preventDefault();
+    var status = document.getElementById("status");
+    var data = new FormData(event.target);
+    fetch(event.target.action, {
+      method: form.method,
+      body: data,
+      headers: {
+          'Accept': 'application/json'
+      }
+    }).then(response => {
+      status.innerHTML = "Thanks for your submission!";
+      form.reset()
+    }).catch(error => {
+      status.innerHTML = "Oops! There was a problem submitting your form"
+    });
+  }
+  form.addEventListener("submit", handleSubmit)
 
+//getting modal opening buttons------------------------------------------
 
+var modalBtns = document.querySelectorAll('.modal-open');
 
+modalBtns.forEach(function(btn) {
+    btn.onclick = function() {
+        var modal = btn.getAttribute('data-modal');
+
+        document.getElementById(modal).style.display = "block";
+    };
+});
+
+var closeBtns = document.querySelectorAll('.modal-close');
+
+closeBtns.forEach(function(btn) {
+    btn.onclick = function() {
+        var modal = (btn.closest(".modal").style.display = "none");
+    };
+});
+
+window.onclick = function(e) {
+    if(e.target.classList.contains('modal')) {
+        e.target.style.display = 'none';
+    }
+};
 
 
 

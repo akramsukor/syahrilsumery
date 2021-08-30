@@ -7,12 +7,26 @@
 
 body {
     overflow-x: hidden;
+    background: #2e313b;
+    /* animation: backgroundChange 1s ease-in-out forwards; */
 }
+
+/* @keyframes backgroundChange {
+    from {background-color: white;}
+    to {background-color: #2e313b;}
+} */
 
 .container_logo {
     margin-left: -200px;
     animation: moveright .5s ease-in-out forwards;
     animation-delay: 2s;
+    display: flex;
+    align-items: center;
+}
+
+.container_logo img {
+    width: 35px;
+    margin-right: 10px;
 }
 
 .container_logo h3 {
@@ -69,7 +83,7 @@ a {
     color: lightgray;
 } */
 
-.topButton {
+#topButton {
     color: #ff4040;
     font-weight: bold;
     border: 2px;
@@ -82,12 +96,12 @@ a {
 }
 
 
-.topButton:hover {
+#topButton:hover {
     background: #ff4040;
     color: white;
 }
 
-.backgroundSlider {
+/* .backgroundSlider {
     position: absolute;
     top: 0;
     left: 0;
@@ -95,9 +109,9 @@ a {
     height: 800vh;
     background: #2e313b;
     z-index: -2;
-}
+} */
 
-.backgroundSlider2 {
+/* .backgroundSlider2 {
     position: absolute;
     top: 100vh;
     left: 0;
@@ -105,7 +119,7 @@ a {
     height: 500vh;
     background: #1d2129;
     z-index: -1;
-}
+} */
 
 .banner1 {
     top: 100vh;
@@ -128,11 +142,11 @@ section {
 }
 
 section3 {
-    margin-top: 650px;
+    margin-top: 100px;
     height: 500px;
     display: flex;
     justify-content: center;
-    align-items: center;
+    margin-bottom: 150px;
 }
 
 section2 {
@@ -180,7 +194,7 @@ section2 {
 /* content--------------------------------------------- */
 
 .mainTitle {
-    margin-top: 200px;
+    margin-top: 80px;
     text-align: center;
     color: white;
     margin-bottom: 50px;
@@ -462,7 +476,6 @@ section2 {
     overflow: hidden;
     margin-left: auto;
     margin-right: auto;
-    position: relative;
 }
 
 .slides3{
@@ -578,30 +591,33 @@ section2 {
 } */
 
 .lightSliderDiv {
-    margin-top: 150px;
+    margin-top: 100px;
     max-width: 1080px;
     /* height: 100vh; */
     display: flex;
     margin-left: auto;
     margin-right: auto;
+    margin-bottom: 100px;
 }
 
 .lightSliderDiv2 {
-    margin-top: 150px;
-    max-width: 1280px;
+    margin-top: 100px;
+    max-width: 1080px;
     /* height: 100vh; */
     display: flex;
     margin-left: auto;
     margin-right: auto;
+    margin-bottom: 150px;
 }
 
 .lightSliderDiv3 {
-    margin-top: 150px;
+    margin-top: 100px;
     max-width: 1280px;
     /* height: 100vh; */
     display: flex;
     margin-left: auto;
     margin-right: auto;
+    margin-bottom: 100px;
 }
 
 .box {
@@ -622,6 +638,7 @@ section2 {
     overflow: hidden;
     justify-content: center;
     align-items: center;
+    position: relative;
 }
 
 .box2 img {
@@ -675,7 +692,7 @@ section2 {
     letter-spacing: 0.5px;
 }
 
-  .button {
+  button {
     margin: 30px 0;
     display: inline-block;
     cursor: pointer;
@@ -703,11 +720,69 @@ section2 {
     }
 }
   
-  .button:hover {
+  button:hover {
     background: #a92c2c;
   }
 
+  .modal {
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background: rgba(0,0,0,0.5);
+    z-index: 11;
+    display: none;
+  }
+  
+  .modal-content {
+    padding-left: 10px;
+    padding-right: 10px;
+    max-width: 500px;
+    z-index: 4;
+    top: -100vh;
+    animation: drop 0.5s ease forwards;
+    padding-bottom: 15px;
+    margin: 0 auto !important; 
+	float: none !important;
+    }
 
+    @keyframes drop {
+      0%{opacity: 0}
+      70%{transform: translateY(17vh)}
+      100%{transform: translateY(15vh); opacity: 1;}
+    }
+  
+  .modal-header {
+    text-align: right;
+    font-size: 26px;
+  }
+
+  .modal-header .modal-close {
+    position: absolute;
+    cursor: pointer;
+    color: #ff523b;
+    /* float: right; */
+    font-size: 20px;
+    background: #efefef;
+    border: 0;
+    outline: 0;
+    padding: 5px 8px;
+    transition: background 0.5s;
+  }
+  
+  .modal-header .modal-close:hover {
+    background: lightgray;
+  }
+  
+  .modal-body {
+    color: #7b7b7b;
+    padding: 15px 0;
+  }
+  
+  .modal {
+    overflow-y:auto;
+  }
 
 
 
@@ -725,7 +800,7 @@ section2 {
     padding: 40px 20px;
     /* box-shadow: 0 0 20px 0px rgba(0,0,0,0.1); */
     transition: transform 0.5s;
-    background-color: white;
+    background-color: #f3f1f0;
     height: 300px;
   }
 
@@ -781,23 +856,29 @@ section2 {
     flex-basis: 10%;
     align-items: center;
   }
+
+  .footerCompanyLogo {
+      display: inline-flex;
+  }
   
   .footer-col-2 {
-    flex: 1;
     text-align: center;
   }
 
-  .footer-col-2 p {
-    margin-top: -20px;
+  .footer-col-2 h3 {
+    font-size: 20px;
+    font-weight: bold;
+    color: lightgray;
+    margin-top: 18px;
   }
   
   .footer-col-2 img {
-    width: 180px;
-    margin-bottom: 20px;
+    width: 50px;
+    margin-right: 10px;
   }
   
-  .footer-col-1, .footer-col-3, .footer-col-4 {
-    flex-basis: 12%;
+  .footer-col-1, .footer-col-2, .footer-col-3, .footer-col-4 {
+    flex-basis: 25%;
     text-align: center;
   }
   
@@ -829,7 +910,6 @@ section2 {
 
   .col-3 {
     flex-basis: 30%;
-    min-width: 350px;
     margin-bottom: 30px;
   }
   
@@ -842,6 +922,7 @@ section2 {
     display: flex;
     flex-wrap: wrap;
     justify-content: space-around;
+    margin-bottom: 100px;
   }
 
 
@@ -903,29 +984,126 @@ section2 {
     color: #8a8a8a;
 }
 
-
-
-.backgroundSliderLeft {
-    position: absolute;
-    left: 0;
-    width: 50vw;
-    height: 100vh;
+.contactUs {
     background: #1d2129;
-    z-index: 1;
-}
-
-.backgroundSliderRight {
-    position: absolute;
-    right: 0;
-    width: 50vw;
-    height: 100vh;
-    background: #1d2129;
-    z-index: 1;
-}
-
-.backgroundSliderDiv {
+    margin-left: auto;
+    margin-right: auto;
+    height: 400px;
+    max-width: 1280px;
+    border: 5px;
+    border-color: #ff4040;
+    /* border-color: linear-gradient(to right, #ff6060, #ff4040); */
+    border-style: solid;
+    padding-right: 25px;
+    padding-left: 25px;
+    border-radius: 6px;
+    margin-bottom: 150px;
     position: relative;
-    overflow: hidden;
+    display: flex;
+    /* flex-direction: column; */
+}
+
+.containerEmail {
+    margin-top: 15px;
+    position: absolute;
+    width: 90%;
+    padding-left: 20px;
+    padding-right: 20px;
+    background-color: #f3f1f0;
+    box-shadow: 0px 0px 2px white;
+    max-width: 500px;
+    z-index: 1;
+}
+
+.containerEmail h2 {
+    margin-top: 10px;
+    margin-bottom: 10px;
+}
+
+.containerEmail2 {
+    margin-left: auto;
+    margin-right: auto;
+    margin-top: 15px;
+    padding-left: 20px;
+    padding-right: 20px;
+    background-color: #f3f1f0;
+    box-shadow: 0px 0px 2px white;
+    max-width: 500px;
+    z-index: 1;
+}
+
+.containerEmail2 h2 {
+    margin-top: 10px;
+    margin-bottom: 10px;
+}
+
+.form-group {
+    width: 100%;
+    font-size: 14px;
+    margin-top: 10px;
+}
+
+.form-group input, .form-group textarea {
+    width: 100%;
+    padding-bottom: 5px;
+    padding-top: 5px;
+    padding-left: 5px;
+    padding-right: 5px;
+    font-size: 12px;
+    border: 1px solid lightgray;
+}
+
+textarea {
+    resize: vertical;
+}
+
+button[type="submit"] {
+    width: 100%;
+    border: none;
+    outline: none;
+    padding: 10px;
+    border-radius: 8px;
+    margin-top: 10px;
+    color: white;
+    background-color: #ff4040;
+    font-size: 14px;
+    cursor: pointer;
+    transition: background-color 0.5s, color .5s;
+}
+
+button[type="submit"]:hover {
+    background-color: #992b2b;
+}
+
+#status {
+    text-align: center;
+    font-size: 12px;
+    padding: 7px;
+}
+
+#status.success {
+    color: rgb(38, 163, 95);
+    animation: status 4s ease forwards;
+}
+
+#status.error {
+    color: red;
+    animation: status 4s ease forwards;
+}
+
+@keyframes status {
+    0% {
+        opacity: 1;
+        pointer-events: all;
+    }
+    90% {
+        opacity: 1;
+        pointer-events: all;
+    }
+    100% {
+        opacity: 0;
+        pointer-events: none;
+    }
 }
 
 /* ------------media query for menu-------- */
@@ -956,6 +1134,10 @@ section2 {
     .slider3Container {
         height: 500px;
     }
+
+    .headline2 h1 {
+        font-size: 50px;
+    }
 }
 
 @media only screen and (max-width: 760px) {
@@ -984,8 +1166,8 @@ section2 {
     nav ul li {
       display: block;
       margin-right: 50px;
-      margin-top: 10px;
-      margin-bottom: 10px;
+      margin-top: 15px;
+      margin-bottom: 15px;
       z-index: 10;
     }
     nav ul li a {
