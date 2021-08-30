@@ -324,7 +324,7 @@ section2 {
     display: flex;
     margin-left: auto;
     margin-right: auto;
-    margin-bottom: 150px;
+    margin-bottom: 100px;
 }
 
 .lightSliderDiv3 {
@@ -411,6 +411,7 @@ section2 {
 
 .bottomButton {
     text-align: center;
+    margin-bottom: 150px;
 }
 
 #bottomButton {
@@ -664,6 +665,15 @@ section2 {
     margin-bottom: 100px;
   }
 
+  .rowTop2 {
+    margin-top: 100px;
+    padding-top: 10px;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-around;
+    margin-bottom: 50px;
+  }
+
 
   .row {
     display: flex;
@@ -685,11 +695,44 @@ section2 {
     display: flex;
 }
 
+.colTop2 {
+    display: flex;
+    background: #f3f1f0;
+    max-width: 400px;
+    margin-bottom: 10px;
+    border-radius: 5px;
+    padding: 15px;
+    transition: background 0.5s;
+    margin-left: 5px;
+    margin-right: 5px;
+}
+
+.colTop2:hover {
+    background: lightgray;
+}
+
+.textContent2 {
+    padding-left: 25px;
+}
+
+.textContent2 h4 {
+    color: black;
+    margin-bottom: 10px;
+}
+
+.textContent2 p {
+    color: #8a8a8a;
+}
+
 .colTop p {
     font-size: 14px;
 }
 
 .colTop img {
+    width: 30px;
+}
+
+.colTop2 img {
     width: 30px;
 }
 
