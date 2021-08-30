@@ -14,7 +14,7 @@ function menutoggle () {
 
 // gsap.fromTo('.backgroundSlider', {x: "-100%"}, {delay: 1.2, x: "0%", duration: 1.2, ease: Power2.easeInOut})
 gsap.fromTo('.navbar', {x: "-100%"}, {delay: 1.2, x: "0%", duration: 1.2, ease: Power2.easeInOut});
-gsap.from('.slider3', {height: 0, duration: 1.2, ease: Power2.easeInOut});
+gsap.from('.slider3Container', {height: 0, duration: 1.2, ease: Power2.easeInOut});
 // gsap.fromTo('.backgroundSlider2', {x: "-100%"}, {delay: 1.8, x: "0%", duration: 1.2, ease: Power2.easeInOut})
 // gsap.fromTo('.backgroundSlider3', {x: "-100%"}, {delay: 1.8, x: "0%", duration: 1.2, ease: Power2.easeInOut})
 gsap.fromTo('.banner1', {y: "100%"}, {delay: 1.5, y: "0%", duration: 1.2, ease: Power2.easeInOut});
@@ -42,7 +42,7 @@ let tl3 = gsap.timeline({
         start: "bottom bottom",
     }
 });
-tl3.from(".mainTitle", { x: -500, scale: 0, opacity: 0, duration: 1 });
+tl3.from(".mainTitle", { y: 200, scale: 0, opacity: 0, duration: 1 });
 
 let tl4 = gsap.timeline({
     scrollTrigger: {
@@ -66,23 +66,7 @@ let tl6 = gsap.timeline({
         start: "top bottom",
     }
 });
-tl6.from(".maps", {y: 200, duration: 1 });
-
-let tl7 = gsap.timeline({
-    scrollTrigger: {
-        trigger: '.backgroundSliderLeft',
-        start: "top bottom",
-    }
-});
-tl7.to(".backgroundSliderLeft", { x: "-100%", duration: 1.2, ease: Power2.easeInOut });
-
-let tl8 = gsap.timeline({
-    scrollTrigger: {
-        trigger: '.backgroundSliderRight',
-        start: "top bottom",
-    }
-});
-tl8.to(".backgroundSliderRight", { x: "100%", duration: 1.2, ease: Power2.easeInOut });
+tl6.from(".maps", { y: 200, duration: 1 });
 
 let tl9 = gsap.timeline({
     scrollTrigger: {
