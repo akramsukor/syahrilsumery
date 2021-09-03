@@ -10,15 +10,38 @@ function menutoggle () {
     }
 }
 
+const texts = ['We are Buttergun Consortium. We build houses and run civil construction projects. We are a trusted contractor with skills, supplies, and talents. Let us turn your dream projects into reality.', 'We provide glass installation, building construction, renovation, civil construction', 'Why us? We put our process of development with very detailed planning, high efficienty of execution, and after service monitoring.'];
+let count = 0;
+let index = 0;
+let currentText = '';
+let letter = '';
+
+(function type () {
+
+    if (count === texts.length) {
+        count = 0;
+    }
+    currentText = texts[count];
+    letter = currentText.slice(0, ++index);
+
+    document.querySelector('.typing').textContent = letter;
+    if (letter.length === currentText.length) {
+        count++;
+        index = 0;
+    }
+    setTimeout(type, 50);
+
+}());
+
 //hero animation-----------------------------------------------------------------------------
 
 // gsap.fromTo('.backgroundSlider', {x: "-100%"}, {delay: 1.2, x: "0%", duration: 1.2, ease: Power2.easeInOut})
-gsap.fromTo('.navbar', {x: "-100%"}, {delay: 1.2, x: "0%", duration: 1.2, ease: Power2.easeInOut});
-gsap.from('.slider3Container', {height: 0, duration: 1.2, ease: Power2.easeInOut});
+gsap.fromTo('.navbar', {x: "-100%"}, {delay: .6, x: "0%", duration: 1.2, ease: Power2.easeInOut});
+gsap.from('.slider3Container', {height: 0, duration: 1, ease: Power2.easeInOut});
 // gsap.fromTo('.backgroundSlider2', {x: "-100%"}, {delay: 1.8, x: "0%", duration: 1.2, ease: Power2.easeInOut})
 // gsap.fromTo('.backgroundSlider3', {x: "-100%"}, {delay: 1.8, x: "0%", duration: 1.2, ease: Power2.easeInOut})
 gsap.fromTo('.banner1', {y: "100%"}, {delay: 1.5, y: "0%", duration: 1.2, ease: Power2.easeInOut});
-gsap.fromTo('.rowTop', {y: "200", opacity:0}, {opacity: 1, delay: 2, y: "0%", duration: 1, ease: Power2.easeInOut});
+gsap.fromTo('.rowTop', {y: "200", opacity:0}, {opacity: 1, delay: .8, y: "0%", duration: 1, ease: Power2.easeInOut});
 
 let tl = gsap.timeline({
     scrollTrigger: {
