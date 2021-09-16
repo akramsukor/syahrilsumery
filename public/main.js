@@ -10,7 +10,7 @@ function menutoggle () {
     }
 }
 
-const texts = ['We are Buttergun Consortium. We build houses and run civil construction projects. We are a trusted contractor with skills, supplies, and talents. Let us turn your dream projects into reality.', 'We provide glass installation, building construction, renovation, civil construction', 'Why us? We put our process of development with very detailed planning, high efficienty of execution, and after service monitoring.'];
+const texts = ['We are Buttergun Consortium. We build houses and run civil construction projects. We are a trusted contractor with skills, supplies, and talents. Let us turn your dream projects into reality.'];
 let count = 0;
 let index = 0;
 let currentText = '';
@@ -18,9 +18,9 @@ let letter = '';
 
 (function type () {
 
-    if (count === texts.length) {
-        count = 0;
-    }
+    // if (count === texts.length) {
+    //     count = 0;
+    // }
     currentText = texts[count];
     letter = currentText.slice(0, ++index);
 
@@ -29,35 +29,127 @@ let letter = '';
         count++;
         index = 0;
     }
-    setTimeout(type, 50);
+    setTimeout(type, 25);
 
 }());
 
+//vertical slider-----------------------------------------------------------------------
+
+const carouselSlide = document.querySelector('.carousel-slide');
+const carouselImages = document.querySelectorAll('.carousel-slide img');
+
+const prevBtn = document.querySelector('#prevBtn');
+const nextBtn = document.querySelector('#nextBtn');
+
+let counter = 1;
+const size = carouselImages[0].clientHeight;
+
+carouselSlide.style.transform = 'translateY(' + (-size*counter) + 'px)';
+
+nextBtn.addEventListener('click',()=>{
+    if(counter >= carouselImages.length - 1) return;
+    carouselSlide.style.transition = 'transform 0.4s ease-in-out';
+    counter++;
+    carouselSlide.style.transform = 'translateY(' + (-size*counter) + 'px)';
+});
+
+prevBtn.addEventListener('click',()=>{
+    if(counter <= 0) return;
+    carouselSlide.style.transition = 'transform 0.4s ease-in-out';
+    counter--;
+    carouselSlide.style.transform = 'translateY(' + (-size*counter) + 'px)';
+});
+
+carouselSlide.addEventListener('transitionend', ()=>{
+    if (carouselImages[counter].id === 'lastClone'){
+        carouselSlide.style.transition = 'none';
+        counter = carouselImages.length - 2;
+        carouselSlide.style.transform = 'translateY(' + (-size*counter) + 'px)';
+    }
+    if (carouselImages[counter].id === 'firstClone'){
+        carouselSlide.style.transition = 'none';
+        counter = carouselImages.length - counter;
+        carouselSlide.style.transform = 'translateY(' + (-size*counter) + 'px)';
+    }
+});
+
+setTimeout(function() {
+    setInterval(function() {
+        document.getElementById("nextBtn").click();
+    }, 1500);
+}, 2000);
+
+//testimonial slider-----------------------------------------------------------------------
+
+const carouselSlide2 = document.querySelector('.carousel-slide2');
+const carouselImages2 = document.querySelectorAll('.carousel-slide2-image img');
+
+const prevBtn2 = document.querySelector('#prevBtn2');
+const nextBtn2 = document.querySelector('#nextBtn2');
+
+let counter2 = 1;
+const size2 = carouselImages2[0].clientWidth;
+
+carouselSlide2.style.transform = 'translateX(' + (-size2*counter2) + 'px)';
+
+nextBtn2.addEventListener('click',()=>{
+    if(counter2 >= carouselImages2.length - 1) return;
+    carouselSlide2.style.transition = 'transform 0.7s ease-in-out';
+    counter2++;
+    carouselSlide2.style.transform = 'translateX(' + (-size2*counter2) + 'px)';
+});
+
+prevBtn2.addEventListener('click',()=>{
+    if(counter2 <= 0) return;
+    carouselSlide2.style.transition = 'transform 0.7s ease-in-out';
+    counter2--;
+    carouselSlide2.style.transform = 'translateX(' + (-size2*counter2) + 'px)';
+});
+
+carouselSlide2.addEventListener('transitionend', ()=>{
+    if (carouselImages2[counter2].id === 'lastClone2'){
+        carouselSlide2.style.transition = 'none';
+        counter2 = carouselImages2.length - 2;
+        carouselSlide2.style.transform = 'translateX(' + (-size2*counter2) + 'px)';
+    }
+    if (carouselImages2[counter2].id === 'firstClone2'){
+        carouselSlide2.style.transition = 'none';
+        counter2 = carouselImages2.length - counter2;
+        carouselSlide2.style.transform = 'translateX(' + (-size2*counter2) + 'px)';
+    }
+});
+
+setTimeout(function() {
+    setInterval(function() {
+        document.getElementById("nextBtn2").click();
+    }, 3000);
+}, 3000);
+
 //hero animation-----------------------------------------------------------------------------
 
+gsap.fromTo('.headline2 h1', {delay: 0.3, x: "-100%", Y:"-100%", scale: 0}, {x: "0%", Y: "0%", duration: 1, scale: 1, ease: Power2.easeInOut})
 // gsap.fromTo('.backgroundSlider', {x: "-100%"}, {delay: 1.2, x: "0%", duration: 1.2, ease: Power2.easeInOut})
 gsap.fromTo('.navbar', {x: "-100%"}, {delay: .6, x: "0%", duration: 1.2, ease: Power2.easeInOut});
 gsap.from('.slider3Container', {height: 0, duration: 1, ease: Power2.easeInOut});
 // gsap.fromTo('.backgroundSlider2', {x: "-100%"}, {delay: 1.8, x: "0%", duration: 1.2, ease: Power2.easeInOut})
-// gsap.fromTo('.backgroundSlider3', {x: "-100%"}, {delay: 1.8, x: "0%", duration: 1.2, ease: Power2.easeInOut})
 gsap.fromTo('.banner1', {y: "100%"}, {delay: 1.5, y: "0%", duration: 1.2, ease: Power2.easeInOut});
 gsap.fromTo('.rowTop', {y: "200", opacity:0}, {opacity: 1, delay: .8, y: "0%", duration: 1, ease: Power2.easeInOut});
 
-let tl = gsap.timeline({
-    scrollTrigger: {
-        trigger: '.slider',
-        start: "bottom bottom",
-    }
-});
-tl.from(".slider", { scale: 0, opacity: 0, duration: 1});
+// let tl = gsap.timeline({
+//     scrollTrigger: {
+//         trigger: '.slider',
+//         start: "bottom bottom",
+//     }
+// });
+// tl.from(".slider", { scale: 0, opacity: 0, duration: 1});
 
-let tl2 = gsap.timeline({
-    scrollTrigger: {
-        trigger: '.slider2',
-        start: "bottom bottom",
-    }
-});
-tl2.from(".slider2", { scale: 0, opacity: 0, duration: 1});
+// let tl2 = gsap.timeline({
+//     scrollTrigger: {
+//         trigger: '.slider2',
+//         start: "bottom bottom",
+//     }
+// });
+// tl2.from(".slider2", { scale: 0, opacity: 0, duration: 1});
 
 let tl3 = gsap.timeline({
     scrollTrigger: {
@@ -65,31 +157,31 @@ let tl3 = gsap.timeline({
         start: "bottom bottom",
     }
 });
-tl3.from(".mainTitle", { y: 200, scale: 0, opacity: 0, duration: 1 });
+tl3.from(".mainTitle", { y: 100, scale: 0, duration: .5 });
 
-let tl4 = gsap.timeline({
-    scrollTrigger: {
-        trigger: '.ourProjects',
-        start: "top bottom",
-    }
-});
-tl4.from(".ourProjects", { y: 200, duration: 1 });
+// let tl4 = gsap.timeline({
+//     scrollTrigger: {
+//         trigger: '.ourProjects',
+//         start: "top bottom",
+//     }
+// });
+// tl4.from(".ourProjects", { y: 100, duration: .5 });
 
-let tl5 = gsap.timeline({
-    scrollTrigger: {
-        trigger: '.testimonial',
-        start: "top bottom"
-    }
-});
-tl5.from(".testimonial", { y: 200, duration: 1 });
+// let tl5 = gsap.timeline({
+//     scrollTrigger: {
+//         trigger: '.testimonial',
+//         start: "top bottom"
+//     }
+// });
+// tl5.from(".testimonial", { y: 100, duration: .5 });
 
-let tl6 = gsap.timeline({
-    scrollTrigger: {
-        trigger: '.maps',
-        start: "top bottom",
-    }
-});
-tl6.from(".maps", { y: 200, duration: 1 });
+// let tl6 = gsap.timeline({
+//     scrollTrigger: {
+//         trigger: '.maps',
+//         start: "top bottom",
+//     }
+// });
+// tl6.from(".maps", { y: 100, duration: .5 });
 
 let tl9 = gsap.timeline({
     scrollTrigger: {
@@ -97,31 +189,39 @@ let tl9 = gsap.timeline({
         start: "top bottom",
     }
 });
-tl9.from(".row", { y: "200", duration: .5, ease: Power2.easeOut });
+tl9.from(".row", { y: 100, duration: .5, ease: Power2.easeOut });
 
-let tl0 = gsap.timeline({
+// let tl0 = gsap.timeline({
+//     scrollTrigger: {
+//         trigger: '.ourServices',
+//         start: "top bottom",
+//     }
+// });
+// tl0.from(".ourServices", { y: 100, opacity: 0, duration: .5, ease: Power2.easeOut });
+
+// let tl11 = gsap.timeline({
+//     scrollTrigger: {
+//         trigger: '.ourVision',
+//         start: "top bottom",
+//     }
+// });
+// tl11.from(".ourVision", { y: 100, opacity: 0, duration: .5, ease: Power2.easeOut });
+
+// let tl12 = gsap.timeline({
+//     scrollTrigger: {
+//         trigger: '.contactUs',
+//         start: "top bottom",
+//     }
+// });
+// tl12.from(".contactUs", { y: 100, opacity: 0, duration: .5, ease: Power2.easeOut });
+
+let t20 = gsap.timeline({
     scrollTrigger: {
-        trigger: '.ourServices',
+        trigger: '.mainTitleTopDiv',
         start: "top bottom",
     }
 });
-tl0.from(".ourServices", { y: "200px", opacity: 0, duration: 1, ease: Power2.easeOut });
-
-let tl11 = gsap.timeline({
-    scrollTrigger: {
-        trigger: '.ourVision',
-        start: "top bottom",
-    }
-});
-tl11.from(".ourVision", { y: "200px", opacity: 0, duration: 1, ease: Power2.easeOut });
-
-let tl12 = gsap.timeline({
-    scrollTrigger: {
-        trigger: '.contactUs',
-        start: "top bottom",
-    }
-});
-tl12.from(".contactUs", { y: "200px", opacity: 0, duration: 1, ease: Power2.easeOut });
+t20.from(".mainTitleTopDiv", { y: 100, duration: .5 });
 
 // gsap.from(".mainTitle1", {
 //     scrollTrigger: {
@@ -132,6 +232,14 @@ tl12.from(".contactUs", { y: "200px", opacity: 0, duration: 1, ease: Power2.ease
 // });
 
 //auto slider------------------------------------------------------------------
+
+// var counter = 1;
+//     setInterval(function(){
+//         document.getElementById('radio' + counter).checked = true;counter++;
+//         if(counter>4){
+//             counter = 1;
+//         }
+//     },5000);
 
 // var counter2 = 1;
 // setInterval(function() {
@@ -159,7 +267,7 @@ setInterval(function() {
     if(counter4>4){
         counter4 = 1;
     }
-},8000);
+},5000);
 
 // lightslider-------------------------------------
 
@@ -200,42 +308,42 @@ setInterval(function() {
     });  
   });
 
-  $(document).ready(function() {
-    $('#responsive2').lightSlider({
-        item:3,
-        loop:false,
-        slideMove:2,
-        easing: 'cubic-bezier(0.25, 0, 0.25, 1)',
-        speed:600,
-        responsive : [
-            {
-                breakpoint:800,
-                settings: {
-                    item:2,
-                    slideMove:1,
-                    slideMargin:6,
-                  }
-            },
-            {
-                breakpoint:500,
-                settings: {
-                    item:1,
-                    slideMove:1
-                  }
-            }
-        ]
-    });  
-  });
+//   $(document).ready(function() {
+//     $('#responsive2').lightSlider({
+//         item:3,
+//         loop:false,
+//         slideMove:2,
+//         easing: 'cubic-bezier(0.25, 0, 0.25, 1)',
+//         speed:600,
+//         responsive : [
+//             {
+//                 breakpoint:800,
+//                 settings: {
+//                     item:2,
+//                     slideMove:1,
+//                     slideMargin:6,
+//                   }
+//             },
+//             {
+//                 breakpoint:500,
+//                 settings: {
+//                     item:1,
+//                     slideMove:1
+//                   }
+//             }
+//         ]
+//     });  
+//   });
 
-  $(document).ready(function() {
-    $('#responsive3').lightSlider({
-        item:1,
-        loop:false,
-        slideMove:1,
-        easing: 'cubic-bezier(0.25, 0, 0.25, 1)',
-        speed:600
-    });  
-  });
+//   $(document).ready(function() {
+//     $('#responsive3').lightSlider({
+//         item:1,
+//         loop:false,
+//         slideMove:1,
+//         easing: 'cubic-bezier(0.25, 0, 0.25, 1)',
+//         speed:600
+//     });  
+//   });
 
   $(document).ready(function() {
     $('#responsive4').lightSlider({
