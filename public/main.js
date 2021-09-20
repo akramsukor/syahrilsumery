@@ -10,7 +10,7 @@ function menutoggle () {
     }
 }
 
-const texts = ['We are Buttergun Consortium. We build houses and run civil construction projects. We are a trusted contractor with skills, supplies, and talents. Let us turn your dream projects into reality.'];
+const texts = ['We build houses and run civil construction projects. We are a trusted contractor with skills, supplies, and talents. Let us turn your dream projects into reality.'];
 let count = 0;
 let index = 0;
 let currentText = '';
@@ -267,7 +267,7 @@ setInterval(function() {
     if(counter4>4){
         counter4 = 1;
     }
-},5000);
+},7000);
 
 // lightslider-------------------------------------
 
@@ -308,6 +308,35 @@ setInterval(function() {
     });  
   });
 
+//   OUR VISION -------------------
+
+//   $(document).ready(function() {
+//     $('#responsive4').lightSlider({
+//         item:2,
+//         loop:false,
+//         slideMove: 1,
+//         easing: 'cubic-bezier(0.25, 0, 0.25, 1)',
+//         speed: 600,
+//         responsive : [
+//             {
+//                 breakpoint:800,
+//                 settings: {
+//                     item:2,
+//                     slideMove:1,
+//                     slideMargin:6,
+//                   }
+//             },
+//             {
+//                 breakpoint:500,
+//                 settings: {
+//                     item:1,
+//                     slideMove:1
+//                   }
+//             }
+//         ]
+//     });  
+//   });
+
 //   $(document).ready(function() {
 //     $('#responsive2').lightSlider({
 //         item:3,
@@ -345,15 +374,15 @@ setInterval(function() {
 //     });  
 //   });
 
-  $(document).ready(function() {
-    $('#responsive4').lightSlider({
-        item:1,
-        loop:false,
-        slideMove:1,
-        easing: 'cubic-bezier(0.25, 0, 0.25, 1)',
-        speed:600
-    });  
-  });
+//   $(document).ready(function() {
+//     $('#responsive4').lightSlider({
+//         item:1,
+//         loop:false,
+//         slideMove:1,
+//         easing: 'cubic-bezier(0.25, 0, 0.25, 1)',
+//         speed:600
+//     });  
+//   });
 
 //form function------------------------------------------
 

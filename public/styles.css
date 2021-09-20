@@ -7,7 +7,7 @@
 
 body {
     overflow-x: hidden;
-    background: #2e313b;
+    background: #1d2129;
     /* animation: backgroundChange 1s ease-in-out forwards; */
 }
 
@@ -62,7 +62,7 @@ body {
     position: -webkit-sticky;
     position: sticky;
     z-index: 9;
-    background: #2e313b;
+    background: #1d2129;
 }
 
 nav {
@@ -135,9 +135,13 @@ section4 {
     align-items: center;
 }
 
-.business, .buildWithUs, .testimonial {
-    background-color: #343743;
+.business, .buildWithUs, .testimonial, .ourProjects, .buildWithUs2, .topContent {
+    background-color: #252a35;
 }
+
+/* .business, .buildWithUs, .testimonial {
+    background-color: lightgrey;
+} */
 
 .testimonial {
     padding-bottom: 30px;
@@ -164,6 +168,10 @@ section4 {
   margin-bottom: 30px;
   font-size: 80px;
 }
+
+.headline2 h2 {
+    margin-bottom: 30px;
+  }
 
 .hero2 {
     position: relative;
@@ -457,6 +465,7 @@ section {
 .slide3{
     width: 20%;
     transition: 2s;
+    position: relative;
 }
 
 .slide3 img {
@@ -570,14 +579,13 @@ section {
     margin-bottom: 100px;
 }
 
-.lightSliderDiv3 {
+/* .lightSliderDiv3 {
     max-width: 1080px;
-    /* height: 100vh; */
     display: flex;
     margin-left: auto;
     margin-right: auto;
-    margin-bottom: 50px;
-}
+    padding-bottom: 50px;
+} */
 
 .box {
     max-width: 420px;
@@ -592,7 +600,7 @@ section {
 }
 
 .box2 {
-    max-width: 1080px;
+    max-width: 550px;
     height: 500px;
     overflow: hidden;
     justify-content: center;
@@ -1025,6 +1033,7 @@ section {
 .colTop img {
     width: 30px;
     opacity: 0.8;
+    color: lightgray;
 }
 
 .colTop2 img {
@@ -1290,7 +1299,7 @@ button[type="submit"]:hover {
         flex-basis: 100%;
     }
 
-    
+
 }
 
 @media only screen and (max-width: 550px) {
@@ -1341,8 +1350,8 @@ button[type="submit"]:hover {
     }
     .headline2 {
         top: 50%;
-        width: 70vw;
-        left: 45%;
+        width: 80vw;
+        left: 50%;
         overflow: hidden;
     }
     .headline2 p {
