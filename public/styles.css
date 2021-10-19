@@ -7,8 +7,7 @@
 
 body {
     overflow-x: hidden;
-    background: #1d2129;
-    /* animation: backgroundChange 1s ease-in-out forwards; */
+    background: #252a35;
 }
 
 /* @keyframes backgroundChange {
@@ -135,9 +134,9 @@ section4 {
     align-items: center;
 }
 
-.business, .buildWithUs, .testimonial, .ourProjects, .buildWithUs2, .topContent {
+/* .business, .buildWithUs, .testimonial, .ourProjects, .buildWithUs2, .topContent {
     background-color: #252a35;
-}
+} */
 
 /* .business, .buildWithUs, .testimonial {
     background-color: lightgrey;
@@ -193,29 +192,40 @@ section4 {
 .headline3 img {
     width: 70px;
     height: 70px;
-    margin-top: 20px;
-    margin-bottom: 15px;
+    margin-top: 30px;
+    margin-bottom: 25px;
     border-radius: 50%;
     display: block;
     margin-left: auto;
     margin-right: auto;
 }
 
-.headline3 p, h3 {
+.headline3 p {
     color: #8a8a8a;
     text-align: center;
+    font-size: 15px;
+    margin-top: 10px;
 }
 
 .headline3 h3 {
+    color: #dadada;
+    text-align: center;
     margin-bottom: 5px;
 }
 
-.typing {
+.headline3 h4 {
+    color: #8a8a8a;
+    text-align: center;
+    margin-top: 10px;
+    font-size: 13px;
+}
+
+.typing, .typing2 {
     position: relative;
     height: 100px;
 }
 
-.typing:after {
+.typing:after, .typing2:after {
     content: "";
     position: absolute;
     border-right: 2px solid white;
@@ -428,11 +438,11 @@ section {
 /* THIRD SLIDER------------------------------------- */
 
 .slider3ContainerOutside {
-    height: 800px;
+    height: 80vh;
 }
 
 .slider3Container {
-    height: 800px;
+    height: 80vh;
     overflow: hidden;
 }
 
@@ -450,7 +460,7 @@ section {
 
 .slides3{
     width: 500%;
-    height: 800px;
+    height: 80vh;
     display: flex;
 }
 
@@ -588,7 +598,7 @@ section {
 } */
 
 .box {
-    max-width: 420px;
+    max-width: 350px;
     /* box-shadow: 0 0 20px 0px rgba(0,0,0,0.1); */
     /* border-radius: 10px; */
     overflow: hidden;
@@ -636,6 +646,10 @@ section {
     box-sizing: border-box;
 }
 
+.detail-box a, span {
+    color: #8a8a8a;
+}
+
 .type {
     display: flex;
     flex-direction: column;
@@ -648,12 +662,7 @@ section {
     padding-right: 8px;
 }
 
-.type span {
-    color: white;
-}
-
 .price {
-    color: white;
     font-weight: 600;
     font-size: 1.1rem;
     letter-spacing: 0.5px;
@@ -668,11 +677,11 @@ section {
     background: #ff4040;
     color: white;
     transition: background 0.5s;
-    padding: 8px 16px;
+    padding: 10px 20px;
     border-radius: 6px;
     border: none;
     outline: none;
-    font-size: 16px;
+    font-size: 15px;
 }
 
 #bottomButton:hover {
@@ -989,6 +998,8 @@ section {
 
 .colTop2Div {
     flex-basis: 33%;
+    padding-left: 5px;
+    padding-right: 5px;
 }
 
 .colTop2 {
@@ -1000,10 +1011,11 @@ section {
     border-radius: 5px;
     padding: 15px;
     transition: transform 0.5s, background 0.5s;
-    margin-left: 5px;
-    margin-right: 5px;
+    margin-left: auto;
+    margin-right: auto;
     box-shadow: 0 5px 10px 5px rgba(0, 0, 0, 0.3);
-    min-height: 150px;
+    min-height: 125px;
+    max-width: 400px;
 }
 
 .colTop2:hover {
@@ -1037,8 +1049,10 @@ section {
 }
 
 .colTop2 img {
-    width: 30px;
-    opacity: 0.8;
+    width: 50px;
+    height: 50px;
+    margin-top: auto;
+    margin-bottom: auto;
 }
 
 .colServices2 {
@@ -1065,7 +1079,7 @@ section {
     min-width: 300px;
     margin-bottom: 50px;
     transition: transform 0.5s;
-    max-width: 550px;
+    max-width: 450px;
 }
 
 .servicesImage {
@@ -1075,7 +1089,7 @@ section {
 .colServices img {
     width: 100%;
     object-fit: cover;
-    height: 250px;
+    height: 200px;
 }
 
 .colServices:hover {
@@ -1089,6 +1103,9 @@ section {
     margin-bottom: 50px;
     transition: transform 0.5s;
     display: flex;
+    max-width: 450px;
+    align-items: center;
+    justify-content: center;
 }
 
 .col-4:hover {
@@ -1096,8 +1113,8 @@ section {
 }
 
 .col-4 img {
-    min-width: 30px;
-    opacity: 0.8;
+    width: 50px;
+    height: 50px;
 }
 
 .textContentServices h4 {
@@ -1250,6 +1267,39 @@ button[type="submit"]:hover {
     padding-bottom: 50px;
 }
 
+.contactUsRow {
+    display: flex;
+    justify-content: center;
+    padding-left: 25px;
+    padding-right: 25px;
+}
+
+.bottomButtonWhatsapp {
+    transition: opacity 0.5s;
+}
+
+.bottomButtonWhatsapp:hover {
+    opacity: 50%;
+}
+
+.bottomButtonWhatsapp2 {
+    margin-left: 15px;
+    margin-right: 15px;
+    font-size: 15px;
+    transition: opacity 0.5s;
+}
+
+.bottomButtonWhatsapp2:hover {
+    opacity: 50%;
+}
+
+.contactUsRow img {
+    height: 40px;
+    width: 40px;
+}
+
+
+
 /* ------------media query for menu-------- */
 
 @media only screen and (max-width: 700px) {
@@ -1259,7 +1309,7 @@ button[type="submit"]:hover {
 }
 
 @media only screen and (max-width: 1400px) {
-    .slider3{
+    /* .slider3{
         height: 500px;
     }
     
@@ -1287,7 +1337,7 @@ button[type="submit"]:hover {
 
     .slider3ContainerOutside {
         height: 500px;
-    }
+    } */
 
     .headline2 h1 {
         font-size: 50px;
@@ -1358,27 +1408,27 @@ button[type="submit"]:hover {
         margin-bottom: 5px;
     }
     .slider3{
-        height: 450px;
+        height: 70vh;
     }
     .slide3 img.reponsive{
-        height: 450px;
+        height: 70vh;
     }
     .slides3{
-        height: 450px;
+        height: 70vh;
     }
     .navigation-manual3 {
-        max-height: 450px;
-        margin-top: -40px;
+        max-height: 70vh;
+        /* margin-top: -40px; */
     }
     .navigation-auto3 {
-        max-height: 450px;
-        margin-top: 410px;
+        max-height: 70vh;
+        /* margin-top: 410px; */
     }
     .slider3Container {
-        height: 450px;
+        height: 70vh;
     }
     .slider3ContainerOutside {
-        height: 450px;
+        height: 70vh;
     }
     .manual-btn3:not(:last-child){
         margin-right: 20px;
@@ -1462,3 +1512,7 @@ button[type="submit"]:hover {
         height: 230px;
     }
 }
+
+h3{ position:relative; }
+h3 span{ position:absolute; top:-100px;}
+

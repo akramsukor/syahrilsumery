@@ -33,6 +33,29 @@ let letter = '';
 
 }());
 
+// const texts2 = ['Kami membina rumah dan menjalankan pembinaan awam. Kami adalah kontraktor yang dipercayai dilengkapi dengan sumber dan tenaga pekerja yang mahir. Mari kami jadikan impian anda sebagai realiti.'];
+// let count2 = 0;
+// let index2 = 0;
+// let currentText2 = '';
+// let letter2 = '';
+
+// (function type2 () {
+
+//     // if (count === texts.length) {
+//     //     count = 0;
+//     // }
+//     currentText2 = texts2[count2];
+//     letter2 = currentText2.slice(0, ++index2);
+
+//     document.querySelector('.typing2').textContent2 = letter2;
+//     if (letter2.length === currentText2.length) {
+//         count2++;
+//         index2 = 0;
+//     }
+//     setTimeout(type2, 25);
+
+// }());
+
 //vertical slider-----------------------------------------------------------------------
 
 const carouselSlide = document.querySelector('.carousel-slide');
@@ -122,34 +145,16 @@ carouselSlide2.addEventListener('transitionend', ()=>{
 setTimeout(function() {
     setInterval(function() {
         document.getElementById("nextBtn2").click();
-    }, 3000);
-}, 3000);
+    }, 5000);
+}, 5000);
 
 //hero animation-----------------------------------------------------------------------------
 
 gsap.fromTo('.headline2 h1', {delay: 0.3, x: "-100%", Y:"-100%", scale: 0}, {x: "0%", Y: "0%", duration: 1, scale: 1, ease: Power2.easeInOut})
-// gsap.fromTo('.backgroundSlider', {x: "-100%"}, {delay: 1.2, x: "0%", duration: 1.2, ease: Power2.easeInOut})
 gsap.fromTo('.navbar', {x: "-100%"}, {delay: .6, x: "0%", duration: 1.2, ease: Power2.easeInOut});
 gsap.from('.slider3Container', {height: 0, duration: 1, ease: Power2.easeInOut});
-// gsap.fromTo('.backgroundSlider2', {x: "-100%"}, {delay: 1.8, x: "0%", duration: 1.2, ease: Power2.easeInOut})
 gsap.fromTo('.banner1', {y: "100%"}, {delay: 1.5, y: "0%", duration: 1.2, ease: Power2.easeInOut});
 gsap.fromTo('.rowTop', {y: "200", opacity:0}, {opacity: 1, delay: .8, y: "0%", duration: 1, ease: Power2.easeInOut});
-
-// let tl = gsap.timeline({
-//     scrollTrigger: {
-//         trigger: '.slider',
-//         start: "bottom bottom",
-//     }
-// });
-// tl.from(".slider", { scale: 0, opacity: 0, duration: 1});
-
-// let tl2 = gsap.timeline({
-//     scrollTrigger: {
-//         trigger: '.slider2',
-//         start: "bottom bottom",
-//     }
-// });
-// tl2.from(".slider2", { scale: 0, opacity: 0, duration: 1});
 
 let tl3 = gsap.timeline({
     scrollTrigger: {
@@ -159,30 +164,6 @@ let tl3 = gsap.timeline({
 });
 tl3.from(".mainTitle", { y: 100, scale: 0, duration: .5 });
 
-// let tl4 = gsap.timeline({
-//     scrollTrigger: {
-//         trigger: '.ourProjects',
-//         start: "top bottom",
-//     }
-// });
-// tl4.from(".ourProjects", { y: 100, duration: .5 });
-
-// let tl5 = gsap.timeline({
-//     scrollTrigger: {
-//         trigger: '.testimonial',
-//         start: "top bottom"
-//     }
-// });
-// tl5.from(".testimonial", { y: 100, duration: .5 });
-
-// let tl6 = gsap.timeline({
-//     scrollTrigger: {
-//         trigger: '.maps',
-//         start: "top bottom",
-//     }
-// });
-// tl6.from(".maps", { y: 100, duration: .5 });
-
 let tl9 = gsap.timeline({
     scrollTrigger: {
         trigger: '.row',
@@ -191,30 +172,6 @@ let tl9 = gsap.timeline({
 });
 tl9.from(".row", { y: 100, duration: .5, ease: Power2.easeOut });
 
-// let tl0 = gsap.timeline({
-//     scrollTrigger: {
-//         trigger: '.ourServices',
-//         start: "top bottom",
-//     }
-// });
-// tl0.from(".ourServices", { y: 100, opacity: 0, duration: .5, ease: Power2.easeOut });
-
-// let tl11 = gsap.timeline({
-//     scrollTrigger: {
-//         trigger: '.ourVision',
-//         start: "top bottom",
-//     }
-// });
-// tl11.from(".ourVision", { y: 100, opacity: 0, duration: .5, ease: Power2.easeOut });
-
-// let tl12 = gsap.timeline({
-//     scrollTrigger: {
-//         trigger: '.contactUs',
-//         start: "top bottom",
-//     }
-// });
-// tl12.from(".contactUs", { y: 100, opacity: 0, duration: .5, ease: Power2.easeOut });
-
 let t20 = gsap.timeline({
     scrollTrigger: {
         trigger: '.mainTitleTopDiv',
@@ -222,14 +179,6 @@ let t20 = gsap.timeline({
     }
 });
 t20.from(".mainTitleTopDiv", { y: 100, duration: .5 });
-
-// gsap.from(".mainTitle1", {
-//     scrollTrigger: {
-//         trigger: '.mainTitle1',
-//         start: "top center",
-//     },
-//     x: -1000
-// });
 
 //auto slider------------------------------------------------------------------
 
@@ -267,7 +216,7 @@ setInterval(function() {
     if(counter4>4){
         counter4 = 1;
     }
-},7000);
+},6000);
 
 // lightslider-------------------------------------
 

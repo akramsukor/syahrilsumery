@@ -10,7 +10,7 @@
     <script src="/jquery.js"></script>
     <script src="/lightslider.js"></script>
 
-    <script src="https://s3-us-west-2.amazonaws.com/s.cdpn.io/16327/gsap-latest-beta.min.js"></script>
+    {{!-- <script src="https://s3-us-west-2.amazonaws.com/s.cdpn.io/16327/gsap-latest-beta.min.js"></script> --}}
 
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -30,24 +30,21 @@
             <nav>
                 <div class="menuNav">
                     <ul id="MenuItems">
-                        <li><a href="#one">Home</a></li>
-                        <li><a href="#two">Services</a></li>
-                        <li><a href="#three">Projects</a></li>
-                        <li><a href="#four">Contact</a></li>
-                        {{!-- <li><a href="/my">Bahasa</a></li> --}}
+                        <li><a href="">Utama</a></li>
+                        <li><a href="">Projek</a></li>
+                        <li><a href="">Tentang</a></li>
+                        <li><a href="">Talian</a></li>
+                        <li><a href="/">English</a></li>
                     </ul>
                 </div>
             </nav>
-            <div id="topButton" class="modal-open" data-modal="modal1">
+            <div id="topButton" class="modal-open" data-modal="modal2">
                 <p>Get free quote</p>
             </div>
-            <img src="/images/menu.grey.png" class="menu-icon" onclick="menutoggle()">
+            <img src="/images/menu.svg" class="menu-icon" onclick="menutoggle()">
         </div>
 
     <header>
-
-        <h3><span id="one"></span></h3>
-
         <div class="slider3ContainerOutside">
         <div class="slider3Container">
         <div class="slider3">
@@ -62,9 +59,10 @@
                 <div class="slide3 first3">
                     <img src="/images/8edited.jpg" alt="">
                     <div class="headline2">
-                        <h1>Create your dream</h1>
-                        <div class="typing"></div>
-                        <button class="modal-open" data-modal="modal1" id="sliderButton">Get free quote now &#8658;</button>
+                        <h1>Realisasikan impian anda</h1>
+                        <div class="typing2"></div>
+                        <p>Kami membina rumah dan menjalankan pembinaan awam. Kami adalah kontraktor yang dipercayai dilengkapi dengan sumber dan tenaga pekerja yang mahir. Mari kami jadikan impian anda sebagai realiti.</p>
+                        <button class="modal-open" data-modal="modal2" id="sliderButton">Get free quote now &#8658;</button>
                     </div>
                 </div>
                 <div class="slide3">
@@ -72,7 +70,7 @@
                     <div class="headline2">
                         <h1>For the future</h1>
                         <p>We want to make places better for generations to come.</p>
-                        <button class="modal-open" data-modal="modal1" id="sliderButton">Get free quote now &#8658;</button>
+                        <button class="modal-open" data-modal="modal2" id="sliderButton">Get free quote now &#8658;</button>
                     </div>
                 </div>
                 <div class="slide3">
@@ -80,7 +78,7 @@
                     <div class="headline2">
                         <h1>Quality as priority</h1>
                         <p>We want to build safely, sustainably and with certainty</p>
-                        <button class="modal-open" data-modal="modal1" id="sliderButton">Get free quote now &#8658;</button>
+                        <button class="modal-open" data-modal="modal2" id="sliderButton">Get free quote now &#8658;</button>
                     </div>
                 </div>
                 <div class="slide3">
@@ -88,7 +86,7 @@
                     <div class="headline2">
                         <h1>Deliver what is best</h1>
                         <p>Our priority is to deliver quality work that can sustain years and years and meet our client's goals</p>
-                        <button class="modal-open" data-modal="modal1" id="sliderButton">Get free quote now &#8658;</button>
+                        <button class="modal-open" data-modal="modal2" id="sliderButton">Get free quote now &#8658;</button>
                     </div>
                 </div>
     
@@ -115,7 +113,7 @@
         </div>
         </div>
 
-                <div class="modal" id="modal1">
+                <div class="modal" id="modal2">
                     <div class="modal-content">
 
                             <div class="containerEmail2">
@@ -179,8 +177,6 @@
 </header>
 
 <content>
-
-    <h3><span id="two"></span></h3>
 
     <div class="topContent">
 
@@ -261,7 +257,7 @@
                 </div>    
                 <div class="textContentServices">
                     <h4>Glass Installation</h4>
-                    <p>Proper utilization of these equipment helps in the economy, quality, safety, speed and timely completion of the project.</p>
+                    <p>Proper utilization of these equipment helps in the economy, quality, safety, speed and timely completion of the project. It optimizes the usage of material, manpower, finance, and the shortage of skilled and efficient labor and at the same time keeps a direct check over the quality measures that are being used.</p>
                 </div>
             </div>
             <div class="colServices">
@@ -270,7 +266,7 @@
                 </div> 
                 <div class="textContentServices">
                     <h4>Civil Construction</h4>
-                    <p>Proper utilization of these equipment helps in the economy, quality, safety, speed and timely completion of the project.</p>
+                    <p>Proper utilization of these equipment helps in the economy, quality, safety, speed and timely completion of the project. It optimizes the usage of material, manpower, finance, and the shortage of skilled and efficient labor and at the same time keeps a direct check over the quality measures that are being used.</p>
                 </div>
             </div>
             <div class="colServices">
@@ -279,7 +275,7 @@
                 </div> 
                 <div class="textContentServices">
                     <h4>Home Renovation</h4>
-                    <p>Proper utilization of these equipment helps in the economy, quality, safety, speed and timely completion of the project.</p>
+                    <p>Proper utilization of these equipment helps in the economy, quality, safety, speed and timely completion of the project. It optimizes the usage of material, manpower, finance, and the shortage of skilled and efficient labor and at the same time keeps a direct check over the quality measures that are being used.</p>
                 </div>
             </div>
             <div class="colServices">
@@ -288,7 +284,7 @@
                 </div> 
                 <div class="textContentServices">
                     <h4>House Building</h4>
-                    <p>Proper utilization of these equipment helps in the economy, quality, safety, speed and timely completion of the project.</p>
+                    <p>Proper utilization of these equipment helps in the economy, quality, safety, speed and timely completion of the project. It optimizes the usage of material, manpower, finance, and the shortage of skilled and efficient labor and at the same time keeps a direct check over the quality measures that are being used.</p>
                 </div>
             </div>
         </div>
@@ -299,55 +295,53 @@
     <div class="business">
 
         <div class="mainTitle">
-            <h1>Why choose us?</h1>
-            {{!-- <p>We specialise in enabling digital marketing ecosystems, branded content production and user experience design.</p> --}}
+            <h1>Future-proofing businesses</h1>
+            <p>We specialise in enabling digital marketing ecosystems, branded content production and user experience design.</p>
         </div> 
 
         <div class="small-container">
 
         <div class="row">
             <div class="col-4">
-                <div class="imageContainer">
-                    <img src="/images/flask2-icon.png">
-                </div>    
+                <img src="/images/biotech_white_24dp.svg">
                 <div class="textContent">
                     <h4>Modern Technology</h4>
-                    <p>Modern technology is all about efficiency and speed; it is about ensuring face-to-face communication, connecting you to your healthcare provider</p>
+                    <p>Modern technology is all about efficiency and speed; it is about ensuring face-to-face communication, connecting you to your healthcare provider, and empowering you by giving you more access and control to the kind of care you get as well as service you receive.</p>
                 </div>
             </div>
             <div class="col-4">
-                <img src="/images/house-icon.png">
+                <img src="/images/build_white_24dp.svg">
                 <div class="textContent">
                     <h4>Powerful Equipment</h4>
-                    <p>Proper utilization of these equipment helps in the economy, quality, safety, speed and timely completion of the project</p>
+                    <p>Proper utilization of these equipment helps in the economy, quality, safety, speed and timely completion of the project. It optimizes the usage of material, manpower, finance, and the shortage of skilled and efficient labor and at the same time keeps a direct check over the quality measures that are being used.</p>
                 </div>
             </div>
             <div class="col-4">
-                <img src="/images/atom-icon.png">
+                <img src="/images/settings_white_24dp.svg">
                 <div class="textContent">
                     <h4>Quality Materials</h4>
-                    <p>Quality materials are essential for quality results; hand in hand with quality control, quality materials provide a sturdy and durable construction</p>
+                    <p>Quality materials are essential for quality results; hand in hand with quality control, quality materials provide a sturdy and durable construction. As an investment, quality building materials work in conjunction with other aspects of a building.</p>
                 </div>
             </div>
             <div class="col-4">
-                <img src="/images/checklist-icon.png">
+                <img src="/images/local_offer_white_24dp.svg">
                 <div class="textContent">
                     <h4>Competitive Pricing</h4>
-                    <p>Our pricing strategy in which the competitors' prices are taken into consideration when setting the price of the same or similar products</p>
+                    <p>Our pricing strategy in which the competitors' prices are taken into consideration when setting the price of the same or similar products. To establish the right price of the product in the competitive pricing method, a detailed market analysis is required.</p>
                 </div>
             </div>
             <div class="col-4">
-                <img src="/images/laptop-icon.png">
+                <img src="/images/groups_white_24dp.svg">
                 <div class="textContent">
                     <h4>Professional Talents</h4>
-                    <p>Our success is a reflection of our people and we love what we do. We are a dynamic and energetic group of professionals, providing excellence.</p>
+                    <p>Our success is a reflection of our people and we love what we do. We are a dynamic and energetic group of professionals, providing excellence and integrity services are our main objective. Our teams are equipped with many years of experience, along with the knowledge and confidence in their field of work.</p>
                 </div>
             </div>
             <div class="col-4">
-                <img src="/images/chairdesk-icon.png">
+                <img src="/images/call_white_24dp.svg">
                 <div class="textContent">
                     <h4>Available Anytime</h4>
-                    <p>The key to all of our successes and productive operations comes from our responsible management team.</p>
+                    <p>The key to all of our successes and productive operations comes from our responsible management team. Our management team is as versatile and diverse as our products and services. They give us boundless attainment and their bountiful of experiences and ideas contributes to our continued success.</p>
                 </div>
             </div>
         </div>
@@ -502,7 +496,7 @@
                         <img src="/images/18.jpg" alt="">
                     </div> --}}
                     <div class="colTop2">
-                        <img src="/images/notepad-icon.png">
+                        <img src="/images/receipt_long_red_24dp.svg">
                         <div class="textContent2">
                             <h4>1. Planning</h4>
                             <p>We initiate, set objective and formulating plan to accomplish the project.</p>
@@ -514,10 +508,10 @@
                         <img src="/images/19.jpg" alt="">
                     </div> --}}
                     <div class="colTop2">
-                        <img src="/images/ruler-icon.png">
+                        <img src="/images/construction_red_24dp.svg">
                         <div class="textContent2">
                             <h4>2. Developing</h4>
-                            <p>We execute the plan accordingly with high efficiency and quality.</p>
+                            <p>We execute the plan accordingly with high efficiency and excellent quality.</p>
                         </div>
                     </div>
                 </div>
@@ -526,7 +520,7 @@
                         <img src="/images/20.jpg" alt="">
                     </div> --}}
                     <div class="colTop2">
-                        <img src="/images/lamp-icon.png">
+                        <img src="/images/content_paste_search_red_24dp.svg">
                         <div class="textContent2">
                             <h4>3. Monitoring</h4>
                             <p>We monitor the completed project to make sure our client's high satisfaction.</p>
@@ -539,9 +533,7 @@
 
     {{!-- light slider start--------------------------------------- --}}
 
-    <h3><span id="three"></span></h3>
-
-    <div class="ourProjects">
+    {{!-- <div class="ourProjects">
 
     <div class="mainTitle">
         <h1>Our projects</h1>
@@ -646,7 +638,7 @@
 
     </div>
 
-    </div>
+    </div> --}}
 
     <!-------------- Testimonial --------------->
 
@@ -714,38 +706,10 @@
                                 </div>    
                                 <div class="headline3">
                                     <i class="fa fa-quote-left"></i>
-                                    <p>We prioritizes on our build quality and Buttergun able to deliver perfectly. As a designer, we really impressed on their capability.</p>
-                                    <img src="images/fred.jpeg">
-                                    <h3>Faiz Fikri Fared</h3>
-                                    <h4>Executive, Berjaya Waterfront</h4>
-                                </div>
-                            </div>    
-                        </section4>
-                        <section4>
-                            <div class="hero2">
-                                <div class="carousel-slide2-image">
-                                    <img src="/images/background-empty.png" alt="">
-                                </div>
-                                <div class="headline3">
-                                    <i class="fa fa-quote-left"></i>
-                                    <p>We prioritizes on our build quality and Buttergun able to deliver perfectly. As a designer, we really impressed on their capability.</p>
-                                    <img src="images/saylem.jpeg">
-                                    <h3>Hanif Fuad Salehuddin</h3>
-                                    <h4>Director, Hafusa Design</h4>
-                                </div>
-                            </div>    
-                        </section4>
-                        <section4>
-                            <div class="hero2">
-                                <div class="carousel-slide2-image">
-                                    <img src="/images/background-empty.png" alt="">
-                                </div>
-                                <div class="headline3">
-                                    <i class="fa fa-quote-left"></i>
-                                    <p>We prioritizes on our build quality and Buttergun able to deliver perfectly. As a designer, we really impressed on their capability.</p>
+                                    <p>Dekat luar memang susah cari tshirt yang elok lepastu harga okay. Baju Colourtagged ni memang selesa, nak pakai untuk tidur pun boleh! </p>
                                     <img src="images/wafi.jpeg">
-                                    <h3>Asyraf Abdul Wafi</h3>
-                                    <h4>Manager, Kimia Nilai</h4>
+                                    <h3>4 Asyraf Abdul Wafi</h3>
+                                    <p>Executive,TMJ Glass Aluminium Sdn Bhd</p>
                                 </div>
                             </div>    
                         </section4>
@@ -756,10 +720,10 @@
                                 </div>
                                 <div class="headline3">
                                     <i class="fa fa-quote-left"></i>
-                                    <p>We prioritizes on our build quality and Buttergun able to deliver perfectly. As a designer, we really impressed on their capability.</p>
-                                    <img src="images/kulop.jpeg">
-                                    <h3>Daniel Fitri Halim</h3>
-                                    <h4>Executive, TMJ Glass Aluminium</h4>
+                                    <p>Dekat luar memang susah cari tshirt yang elok lepastu harga okay. Baju Colourtagged ni memang selesa, nak pakai untuk tidur pun boleh! </p>
+                                    <img src="images/wafi.jpeg">
+                                    <h3>1 Asyraf Abdul Wafi</h3>
+                                    <p>Executive, TMJ Glass Aluminium Sdn Bhd</p>
                                 </div>
                             </div>    
                         </section4>
@@ -770,10 +734,38 @@
                                 </div>
                                 <div class="headline3">
                                     <i class="fa fa-quote-left"></i>
-                                    <p>We prioritizes on our build quality and Buttergun able to deliver perfectly. As a designer, we really impressed on their capability.</p>
-                                    <img src="images/fred.jpeg">
-                                    <h3>Faiz Fikri Fared</h3>
-                                    <h4>Executive, Berjaya Waterfront</h4>
+                                    <p>Dekat luar memang susah cari tshirt yang elok lepastu harga okay. Baju Colourtagged ni memang selesa, nak pakai untuk tidur pun boleh! </p>
+                                    <img src="images/wafi.jpeg">
+                                    <h3>2 Asyraf Abdul Wafi</h3>
+                                    <p>Executive, TMJ Glass Aluminium Sdn Bhd</p>
+                                </div>
+                            </div>    
+                        </section4>
+                        <section4>
+                            <div class="hero2">
+                                <div class="carousel-slide2-image">
+                                    <img src="/images/background-empty.png" alt="">
+                                </div>
+                                <div class="headline3">
+                                    <i class="fa fa-quote-left"></i>
+                                    <p>Dekat luar memang susah cari tshirt yang elok lepastu harga okay. Baju Colourtagged ni memang selesa, nak pakai untuk tidur pun boleh! </p>
+                                    <img src="images/wafi.jpeg">
+                                    <h3>3 Asyraf Abdul Wafi</h3>
+                                    <p>Executive, TMJ Glass Aluminium Sdn Bhd</p>
+                                </div>
+                            </div>    
+                        </section4>
+                        <section4>
+                            <div class="hero2">
+                                <div class="carousel-slide2-image">
+                                    <img src="/images/background-empty.png" alt="">
+                                </div>
+                                <div class="headline3">
+                                    <i class="fa fa-quote-left"></i>
+                                    <p>Dekat luar memang susah cari tshirt yang elok lepastu harga okay. Baju Colourtagged ni memang selesa, nak pakai untuk tidur pun boleh! </p>
+                                    <img src="images/wafi.jpeg">
+                                    <h3>4 Asyraf Abdul Wafi</h3>
+                                    <p>Executive, TMJ Glass Aluminium Sdn Bhd</p>
                                 </div>
                             </div>    
                         </section4>
@@ -784,10 +776,10 @@
                                 </div>
                                 <div class="headline3">
                                     <i class="fa fa-quote-left"></i>
-                                    <p>We prioritizes on our build quality and Buttergun able to deliver perfectly. As a designer, we really impressed on their capability.</p>
-                                    <img src="images/saylem.jpeg">
-                                    <h3>Hanif Fuad Salehuddin</h3>
-                                    <h4>Director, Hafusa Design</h4>
+                                    <p>Dekat luar memang susah cari tshirt yang elok lepastu harga okay. Baju Colourtagged ni memang selesa, nak pakai untuk tidur pun boleh! </p>
+                                    <img src="images/wafi.jpeg">
+                                    <h3>1 Asyraf Abdul Wafi</h3>
+                                    <p>Executive, TMJ Glass Aluminium Sdn Bhd</p>
                                 </div>
                             </div>    
                         </section4>
@@ -796,46 +788,35 @@
             </div>
     </div>
 
-    <h3><span id="four"></span></h3>
-
     <div class="buildWithUs2">
         <div class="mainTitle">
-            <h1>Let's keep in touch</h1>
-            <p>Feel free to reach us via Whatsapp, phone call or fill in our simple form</p>
+            <h1>Let's build your project</h1>
+            <p>Why us? We put our process of development with very detailed planning, high efficienty of execution, and after service monitoring.</p>
         </div>
-
-        <div class="contactUsRow">
-            <div class="bottomButtonWhatsapp">
-                <a href="https://wa.link/2ensol"><img src="images/whatsapp-logo.png" alt=""></a>
-            </div>
-            <div class="bottomButtonWhatsapp2">
-                <a href="tel:+60192772060"><img src="images/call-logo-squaregreen.png" alt=""></a>
-            </div>
-            <div class="bottomButton">
-                <button class="modal-open" data-modal="modal1" id="bottomButton">Form</button>
-            </div>
-        </div>    
     
-        {{!-- <div class="small-container3">
-            <div class="row2">
-                <div class="colServices2">
-                    <div class="servicesImage2">
-                        <img src="/images/12.jpg">
-                    </div>    
-                </div>
-                <div class="colServices2">
-                    <div class="servicesImage2">
-                        <img src="/images/13.jpg">
-                    </div> 
-                </div>
-                <div class="colServices2">
-                    <div class="servicesImage2">
-                        <img src="/images/16.jpg">
-                    </div> 
-                </div>
+        <div class="small-container3">
+        <div class="row2">
+            <div class="colServices2">
+                <div class="servicesImage2">
+                    <img src="/images/12.jpg">
+                </div>    
             </div>
-        </div> --}}
+            <div class="colServices2">
+                <div class="servicesImage2">
+                    <img src="/images/13.jpg">
+                </div> 
+            </div>
+            <div class="colServices2">
+                <div class="servicesImage2">
+                    <img src="/images/16.jpg">
+                </div> 
+            </div>
+        </div>
+    </div>
 
+        <div class="bottomButton">
+            <button class="modal-open" data-modal="modal2" id="bottomButton">Get free quote now &#8658;</button>
+        </div>
     </div>
 
     {{!-- <div class="contactUs">
