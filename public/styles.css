@@ -60,7 +60,7 @@ body {
     top: 0;
     position: -webkit-sticky;
     position: sticky;
-    z-index: 9;
+    z-index: 20;
     background: #1d2129;
 }
 
@@ -488,7 +488,7 @@ section {
 .navigation-manual3{
     position: absolute;
     width: 1280px;
-    margin-top: -40px;
+    margin-top: -4.2vh;
     display: flex;
     justify-content: center;
     left: 50%;
@@ -532,7 +532,7 @@ section {
     display: flex;
     width: 1280px;
     justify-content: center;
-    margin-top: 760px;
+    margin-top: 75.8vh;
     left: 50%;
     transform: translateX(-50%);
 }
@@ -664,7 +664,7 @@ section {
 
 .price {
     font-weight: 600;
-    font-size: 1.1rem;
+    font-size: 15px;
     letter-spacing: 0.5px;
 }
 
@@ -1417,12 +1417,10 @@ button[type="submit"]:hover {
         height: 70vh;
     }
     .navigation-manual3 {
-        max-height: 70vh;
-        /* margin-top: -40px; */
+        margin-top: -4.2vh;
     }
     .navigation-auto3 {
-        max-height: 70vh;
-        /* margin-top: 410px; */
+        margin-top: 65.8vh;
     }
     .slider3Container {
         height: 70vh;
