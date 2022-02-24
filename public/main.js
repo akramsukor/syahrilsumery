@@ -1,13 +1,6 @@
 const menuBtn = document.querySelector('.menu-icon');
-let menuOpen = false;
-menuBtn.addEventListener('click', function () {
-    if(!menuOpen) {
-        menuBtn.classList.add('open');
-        menuOpen = true;
-    } else {
-        menuBtn.classList.remove('open');
-        menuOpen = false;
-    }
+menuBtn.addEventListener('click', function() {
+    menuBtn.classList.toggle('open');
 });
 
 const MenuItems = document.getElementById("MenuItems");
