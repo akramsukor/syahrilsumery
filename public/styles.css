@@ -2,14 +2,13 @@
     margin: 0;
     padding:0;
     box-sizing: border-box;
-    background-color: black;
     font-family: 'IBM Plex Sans', sans-serif;
 }
 
 body {
     margin-left: auto;
     margin-right: auto;
-    max-width: 1280px;
+    background-color: black;
 }
 
 .navbar {
@@ -70,6 +69,7 @@ a {
     margin-left: 20px;
     margin-right: 10px;
     display: none;
+    cursor: pointer;
 }
 
 .menu-icon-burger {
@@ -149,7 +149,7 @@ header span {
 .gradient {
     display: inline;
     white-space: nowrap;
-    background: linear-gradient(90deg, #ff4848, #87ffc7, #4a6efd, #ff72de, #ff4848);
+    background: linear-gradient(45deg, rgb(41, 213, 127), rgb(250, 78, 78), rgb(39, 164, 232), rgb(41, 213, 127));
     background-size: 400%;
     -webkit-text-fill-color: transparent;
     -webkit-background-clip: text;
@@ -166,6 +166,114 @@ header span {
     text-align: center;
     margin-left: 10px;
     margin-right: 10px;
+    margin-bottom: 100px;
+}
+
+.container-mentor {
+    height: 100vh;
+    position: relative;
+}
+
+.mentor-section {
+    position: relative;
+}
+
+.mentor {
+    position: relative;
+}
+
+.mentor-img {
+    top: 800px;
+    position: absolute;
+    left: 10vw;
+}
+
+.mentor-img img{
+    width: 400px;
+}
+
+.background-img {
+    position: absolute;
+    height: 100vh;
+    width: 100%;
+    z-index: -1;
+    object-fit: cover;
+}
+
+.mentor-text {
+    text-align: center;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+}
+
+.mentor-text h1 {
+    font-size: 50px;
+}
+
+.mentor-text-detail {
+    margin-top: 50px;
+    margin-left: 200px;
+    text-align: left;
+    max-width: 400px;
+}
+
+.outer-wrapper-position {
+    position: relative;
+}
+
+.slide {
+    width: 100vw;
+    height: 100vh;
+}
+
+.wrapper {
+    display: flex;
+    flex-direction: row;
+    width: 600vw;
+    transform: rotate(90deg) translateY(-100vh);
+    transform-origin: top left;
+}
+
+.one {
+    background: red;
+}
+
+.two {
+    background: blue;
+}
+
+.three {
+    background: green;
+}
+
+.four {
+    background: yellow;
+}
+
+.five {
+    background: purple;
+}
+
+.six {
+    background: pink;
+}
+
+.outer-wrapper {
+    width: 100vh;
+    height: 100vw;
+    transform: rotate(-90deg) translateX(-100vh);
+    transform-origin: top left;
+    overflow-y: scroll;
+    overflow-x: hidden;
+    position: absolute;
+    scrollbar-width: none;
+    -ms-overflow-style: none;
+}
+
+::-webkit-scrollbar {
+    display: none;
 }
 
 @keyframes animate {
@@ -227,11 +335,11 @@ header span {
         display: none;
     }
     .text1 {
-        letter-spacing: 1px;
+        letter-spacing: 3px;
         font-size: 32px;
     }
     .text2{
-        letter-spacing: 1px;
+        letter-spacing: 3px;
         font-size: 32px;
         transform: translateY(-20%);
     }
