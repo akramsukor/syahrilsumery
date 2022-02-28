@@ -11,10 +11,6 @@ body {
     background-color: black;
 }
 
-.navbar {
-    margin-top: 7vh;
-}
-
 .container-logo {
     display: flex;
     align-items: center;
@@ -31,6 +27,7 @@ hr {
 }
 
 .navbar {
+    margin-top: 7vh;
     display: flex;
     align-items: center;
     padding: 20px;
@@ -162,7 +159,7 @@ header span {
 }
 
 .maintenance {
-    margin-top: 75vh;
+    margin-top: 85vh;
     text-align: center;
     margin-left: 10px;
     margin-right: 10px;
@@ -198,6 +195,8 @@ header span {
     width: 100%;
     z-index: -1;
     object-fit: cover;
+    margin-bottom: 10%;
+    opacity: 0.3;
 }
 
 .mentor-text {
@@ -219,61 +218,38 @@ header span {
     max-width: 400px;
 }
 
-.outer-wrapper-position {
+.horizontal-section {
+    padding: 100px 0;
+    background-color: pink;
+}
+
+.sticky-wrapper {
+    width: 100%;
+    overflow: hidden;
+    position: sticky;
+    top: 100px
+}
+
+.element-wrapper {
     position: relative;
-}
-
-.slide {
-    width: 100vw;
-    height: 100vh;
-}
-
-.wrapper {
     display: flex;
-    flex-direction: row;
-    width: 600vw;
-    transform: rotate(90deg) translateY(-100vh);
-    transform-origin: top left;
 }
 
-.one {
-    background: red;
+.element {
+    width: 800px;
+    height: 800px;
+    background-color: purple;
+    margin: 0 20px 0 0;
+    flex-shrink: 0;
 }
 
-.two {
-    background: blue;
-}
-
-.three {
-    background: green;
-}
-
-.four {
-    background: yellow;
-}
-
-.five {
-    background: purple;
-}
-
-.six {
-    background: pink;
-}
-
-.outer-wrapper {
-    width: 100vh;
-    height: 100vw;
-    transform: rotate(-90deg) translateX(-100vh);
-    transform-origin: top left;
-    overflow-y: scroll;
-    overflow-x: hidden;
-    position: absolute;
-    scrollbar-width: none;
-    -ms-overflow-style: none;
-}
-
-::-webkit-scrollbar {
-    display: none;
+.footer{
+    position:fixed;
+    bottom:0;
+    text-align: center;
+    padding: 10px;
+    background-color: black;
+    width: 100vw;
 }
 
 @keyframes animate {
@@ -342,6 +318,9 @@ header span {
         letter-spacing: 3px;
         font-size: 32px;
         transform: translateY(-20%);
+    }
+    .mentor-img img{
+        width: 200px;
     }
     @keyframes text {
         0%{

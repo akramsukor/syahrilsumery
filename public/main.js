@@ -13,6 +13,27 @@ function menutoggle () {
     }
 }
 
+const windowWidth = window.innerWidth;
+const horizontalLength = document.querySelector('.element-wrapper').scrollWidth;
+const distFromTop = document.querySelector('.horizontal-section').offsetTop;
+const scrollDistance = distFromTop + horizontalLength - windowWidth;
+
+document.querySelector('.horizontal-section').style.height = horizontalLength + 'px';
+
+window.onscroll = function() {
+    const scrollTop = window.pageYOffset;
+    if(scrollTop >= distFromTop && scrollTop <= scrollDistance) {
+        document.querySelector('.element-wrapper').style.transform = 'translateX(-' + (scrollTop - distFromTop) + 'px)';
+    }
+}
+
+
+
+
+
+
+
+
 // GSAP Animation
 
 gsap.to(".mentor-img", {
