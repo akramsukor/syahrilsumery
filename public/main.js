@@ -36,24 +36,30 @@ window.onscroll = function() {
 
 // GSAP Animation
 
-gsap.to(".mentor-img", {
-    yPercent: -100,
-    ease: "none",
-    scrollTrigger: {
-      trigger: ".mentor-section",
-      // start: "top bottom", // the default values
-      // end: "bottom top",
-      scrub: true
-    }, 
-});
+// gsap.to(".mentor-img", {
+//     yPercent: -100,
+//     ease: "none",
+//     scrollTrigger: {
+//       trigger: ".mentor-section",
+//       scrub: true
+//     }, 
+// });
   
-gsap.to(".background-img", {
-    yPercent: 10,
-    ease: "none",
-    scrollTrigger: {
-      trigger: ".mentor-section",
-      // start: "top bottom", // the default values
-      // end: "bottom top",
-      scrub: true
-    }, 
-});
+// gsap.to(".background-img", {
+//     yPercent: 10,
+//     ease: "none",
+//     scrollTrigger: {
+//       trigger: ".mentor-section",
+//       scrub: true
+//     }, 
+// });
+
+// gsap.to(".element2", {
+//     xPercent: -10,
+//     ease: "none",
+//     scrollTrigger: {
+//       trigger: ".element2",
+//       start: "bottom bottom",
+//       scrub: true
+//     }, 
+// });

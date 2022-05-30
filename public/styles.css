@@ -1,3 +1,7 @@
+html {
+    scroll-behavior: smooth;
+}
+
 * {
     margin: 0;
     padding:0;
@@ -14,10 +18,13 @@ body {
 .container-logo {
     display: flex;
     align-items: center;
+    margin-left: 20px;
+    margin-top: 5px;
+    margin-bottom: 5px;
 }
 
 .container-logo img{
-    width: 100px;
+    width: 80px;
 }
 
 hr {
@@ -27,14 +34,15 @@ hr {
 }
 
 .navbar {
-    margin-top: 7vh;
+    margin-top: 4vh;
     display: flex;
     align-items: center;
-    padding: 20px;
+    padding: 10px;
     top: 0;
     position: -webkit-sticky;
     position: sticky;
     z-index: 20;
+    background-color: black;
 }
 
 nav {
@@ -159,7 +167,7 @@ header span {
 }
 
 .maintenance {
-    margin-top: 85vh;
+    margin-top: 100vh;
     text-align: center;
     margin-left: 10px;
     margin-right: 10px;
@@ -180,9 +188,9 @@ header span {
 }
 
 .mentor-img {
-    top: 800px;
     position: absolute;
     left: 10vw;
+    filter: grayscale(40%);
 }
 
 .mentor-img img{
@@ -219,20 +227,221 @@ header span {
 }
 
 .horizontal-section {
-    padding: 100px 0;
-    background-color: pink;
+    padding: 0 0;
+    background-color: black;
 }
 
 .sticky-wrapper {
     width: 100%;
     overflow: hidden;
     position: sticky;
-    top: 100px
+    top: 0;
 }
 
 .element-wrapper {
     position: relative;
     display: flex;
+}
+
+.element1, .element2, .element3,.element4, .element5, .element6, .element8, .element9 {
+    width: 1400px;
+    height: 100vh;
+    margin: 0;
+    flex-shrink: 0;
+    display: flex;
+    position: relative;
+}
+
+.element1-content {
+    margin-top: 30vh;
+    margin-left: 20vw;
+    width: 400px;
+}
+
+.element1-content h2, h4{
+    margin-bottom: 30px;
+}
+
+.element1-content p{
+    margin-left: 100px;
+}
+
+.horizontal-line hr {
+    margin-top: 45vh;
+    width: 35vw;
+    margin-left: 150px;
+    position: absolute;
+    z-index: -1;
+}
+
+.element2 {
+    background-color: black;
+}
+
+.element2 img {
+    opacity: 50%;
+    filter: grayscale(50%);
+    height: 100vh;
+    width: 1400px;
+    object-fit: cover;
+}
+
+.element2-content {
+    position: absolute;
+    left: 25vw;
+    top: 40vh;
+}
+
+.element2-content h3 {
+    font-size: 40px;
+}
+
+.element2-content h1 {
+    font-size: 60px;
+}
+
+.element3-content {
+    display: flex;
+    margin: auto;
+}
+
+.element3-content-year {
+    margin-top: auto;
+    margin-bottom: auto;
+    font-size: 70px;
+}
+
+.element3-content-img {
+    margin-left: 150px;
+}
+
+.element3-content-img img {
+    margin-bottom: 50px;
+    filter: grayscale(50%);
+}
+
+.element3-content-img p {
+    margin-left: 50px;
+    width: 400px;
+}
+
+.element4 {
+    margin-left: 200px;
+}
+
+.element4-img1, .element4-img2 {
+    margin-top: auto;
+    margin-bottom: auto;
+}
+
+.element4-img1 img {
+    width: 400px;
+    filter: grayscale(50%);
+}
+
+.element4-img2 {
+    width: 500px;
+    margin-left: 100px;
+}
+
+.element4-img2 img {
+    margin-top: 50px;
+    width: 500px;
+    filter: grayscale(50%);
+}
+
+.element5 {
+    background-color: black;
+}
+
+.element5 img {
+    opacity: 50%;
+    filter: grayscale(50%);
+    object-fit: cover;
+    width: 100%;
+}
+
+.element5-content {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    -ms-transform: translate(-50%, -50%);
+    transform: translate(-50%, -50%);
+}
+
+.element5-content h1 {
+    font-size: 60px;
+}
+
+.element6 {
+    background-color: white;
+}
+
+.element6-container {
+    position: absolute;
+    bottom: 0;
+}
+
+.element6-year {
+    font-size: 70px;
+    display: flex;
+    justify-content: center;
+    margin-bottom: 100px;
+}
+
+.element6-content {
+    display: flex;
+    margin-left: 200px;
+    margin-right: 200px;
+}
+
+.element6-content-img img {
+    filter: grayscale(50%);
+}
+
+.element6-content-text {
+    width: 400px;
+    margin-left: 50px;
+}
+
+.element6-year p, .element6-content-text p {
+    color: black;
+}
+
+.element7 img {
+    height: 100vh;
+    filter: grayscale(50%);
+}
+
+.element8 {
+    width: 700px;
+    background-color: white;
+    display: inline;
+}
+
+.element8-container {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    -ms-transform: translate(-50%, -50%);
+    transform: translate(-50%, -50%);
+}
+
+.element8-year p {
+    font-size: 70px;
+    color: black;
+    display: flex;
+    justify-content: center;
+    margin-bottom: 50px;
+}
+
+.element8-text p {
+    color: black;
+    width: 400px;
+    line-height: 1.8;
+    margin-left: auto;
+    margin-right: auto;
+    text-align: center;
 }
 
 .element {
@@ -243,12 +452,71 @@ header span {
     flex-shrink: 0;
 }
 
+.event-home {
+    height: 250px;
+}
+
+.event-home img {
+    width: 350px;
+    display: block;
+    margin-top: 50px;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.event-home-word {
+    padding: 0 10px;
+}
+
+.event-home-word h3 {
+    text-align: center;
+    font-size: 23px;
+    margin-bottom: 10px;
+}
+
+.spacing {
+    margin-bottom: 50px;
+}
+
+.event-button-section {
+    margin-right: 10px;
+    margin-left: 10px;
+}
+
+.event-button-section a {
+    font-size: 14px;
+}
+
+.event-button {
+    display: block;
+    width: 400px;
+    color: white;
+    padding: 15px 16px;
+    background-color:rgba(28, 135, 128, 1);
+    border-radius: 5px;
+    border: none;
+    outline: none;
+    cursor: pointer;
+    transition: all 0.3s ease-in-out;
+    margin-left: auto;
+    margin-right: auto;
+    margin-bottom: 10px;
+  }
+
+.event-button:hover {
+    background: rgb(20, 92, 87)
+}
+
+.spacing-2 {
+    margin-bottom: 200px;
+}
+
 .footer{
     position:fixed;
     bottom:0;
     text-align: center;
-    padding: 10px;
-    background-color: black;
+    padding: 40px 10px;
+    background-color: rgb(44, 44, 44);
     width: 100vw;
 }
 
@@ -307,7 +575,7 @@ header span {
         cursor: pointer;
         z-index: 10;
     }
-    hr {
+    .navbar hr {
         display: none;
     }
     .text1 {
@@ -321,6 +589,13 @@ header span {
     }
     .mentor-img img{
         width: 200px;
+    }
+    .element1 {
+        flex-direction: column;
+    }
+    .event-button {
+        display: block;
+        width: 350px;
     }
     @keyframes text {
         0%{

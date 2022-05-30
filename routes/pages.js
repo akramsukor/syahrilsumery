@@ -1,9 +1,9 @@
 const express = require('express');
-const { homeCtrlFunction, bahasaCtrlFunction } = require('../controllers/pagesCtrlFile');
+const { homeCtrlFunction, eventCtrlFunction } = require('../controllers/pagesCtrlFile');
 
 const router = express.Router();
 
 router.get('/', homeCtrlFunction);
-router.get('/my', bahasaCtrlFunction);
+router.get('/event', eventCtrlFunction);
 
 module.exports = router;
