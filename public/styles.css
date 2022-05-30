@@ -483,10 +483,6 @@ header span {
     margin-left: 10px;
 }
 
-.event-button-section a {
-    font-size: 14px;
-}
-
 .event-button {
     display: block;
     width: 400px;
@@ -501,6 +497,7 @@ header span {
     margin-left: auto;
     margin-right: auto;
     margin-bottom: 10px;
+    font-size: 16px;
   }
 
 .event-button:hover {
