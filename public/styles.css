@@ -255,12 +255,20 @@ header span {
     display: flex;
     background-color: #2F3649; /* For browsers that do not support gradients */
     background-image: linear-gradient(#2F3649, #3C69AB);
-    width: 1280px;
+    max-width: 1280px;
     margin-left: auto;
     margin-right: auto;
+    padding-right: 80px;
     padding-left: 80px;
     border-radius: 20px;
     position: relative;
+}
+
+.roulette-outer-container {
+}
+
+.pencapaian-link {
+    padding-left: 80px;
 }
 
 /* .pencapaian {
@@ -272,45 +280,45 @@ header span {
 
 #prevBtn {
     position: absolute;
-    top: 5px;
+    top: 3px;
     z-index: 10;
     left: 350px;
-    font-size: 50px;
+    font-size: 30px;
     color: white;
     cursor: pointer;
 }
 
 #nextBtn {
     position: absolute;
-    bottom: 5px;
+    bottom: 3px;
     z-index: 10;
     left: 350px;
-    font-size: 50px;
+    font-size: 30px;
     color: white;
     cursor: pointer;
 }
 
 .position-carousel {
-    height: 300px;
+    height: 250px;
     position: relative;
 }
 
 .carousel-container {
     overflow: hidden;
-    height: 300px;
+    height: 250px;
     align-items: center;
     width: 595px;
     position: relative;
 }
 
 .roulette-container {
-    height: 300px;
+    height: 250px;
     width: 595px;
     position: relative;
 }
 
 .hero img {
-    height: 300px;
+    height: 250px;
     width: 595px;
     position: relative;
 }
@@ -322,7 +330,7 @@ header span {
     top: 50%;
     transform: translateY(-50%);
     z-index: 3;
-    height: 150px;
+    height: 130px;
     width: 590px;
     background-color: white;
     border-radius: 10px;
@@ -868,6 +876,70 @@ button[type="submit"]:hover {
     }
 }
 
+.lightSliderDiv {
+    max-width: 1080px;
+    /* height: 100vh; */
+    display: flex;
+    margin-left: auto;
+    margin-right: auto;
+    padding-bottom: 25px;
+}
+
+.box {
+    max-width: 350px;
+    /* box-shadow: 0 0 20px 0px rgba(0,0,0,0.1); */
+    /* border-radius: 10px; */
+    overflow: hidden;
+    /* margin: 5px; */
+    justify-content: center;
+    align-items: center;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.slide img {
+    height: 500px;
+    position: relative;
+}
+
+.slide-img img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    box-sizing: border-box;
+}
+
+.detail-box {
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 10px 20px;
+    box-sizing: border-box;
+}
+
+.detail-box a, span {
+    color: #8a8a8a;
+}
+
+.type {
+    display: flex;
+    flex-direction: column;
+}
+
+.type a {
+    margin: 5px 0px;
+    font-weight: 700;
+    letter-spacing: 0.5px;
+    padding-right: 8px;
+}
+
+.price {
+    font-weight: 600;
+    font-size: 15px;
+    letter-spacing: 0.5px;
+}
+
 @media only screen and (max-width: 800px) {
     .navbar {
         margin-top: 0vh;
@@ -951,8 +1023,32 @@ button[type="submit"]:hover {
         width: 400px;
         height: 500px;
     }
-    .container-pencapaian-background {
-        width: 400px;
+    .container-pencapaian {
+        display: block;
+        padding-left: 20px;
+        padding-right: 20px;
+    }
+    .roulette-container {
+
+    }
+    .pencapaian-link {
+        padding-left: 0px;
+    }
+    .position-carousel {
+        height: 250px;
+        position: relative;
+    }
+    .carousel-container {
+        width: 100%;
+    }
+    .roulette-container {
+        max-width: 100%;
+    }
+    .hero img {
+        max-width: 100%;
+    }
+    .headline {
+        max-width: 100%;
     }
 }
 
