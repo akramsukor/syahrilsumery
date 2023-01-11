@@ -1050,6 +1050,12 @@ button[type="submit"]:hover {
     .headline {
         max-width: 100%;
     }
+    #prevBtn {
+        left: 200px;
+    }
+    #nextBtn {
+        left: 200px;
+    }
 }
 
 
